@@ -1,6 +1,9 @@
 main(){
+  // Data
   // Data Type
   // Primitive Data Type
+  // Variable
+  // strictly-typed
 
   /*
   1. string - text/multiple characters/letters like "Bangladesh"
