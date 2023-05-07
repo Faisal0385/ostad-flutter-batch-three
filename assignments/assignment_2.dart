@@ -13,14 +13,17 @@
 
 void main(){
 
-  List Students = [
+  List StudentGradeList = [
     {"name":"Faisal A Salam", "testScore": 55},
-    {"name":"Fahad A Salam", "testScore": 95},
-    {"name":"Fahim A Salam", "testScore": 85},
+    {"name":"Fahad", "testScore": 95},
+    {"name":"Fahim", "testScore": 85},
+    {"name":"Fatema", "testScore": 75},
+    {"name":"Farzana", "testScore": -15},
+    {"name":"Famida", "testScore": 15.55},
   ];
 
-  for(int i = 0; i < Students.length; i++){
-    studentGrade(Students[i]['name'], Students[i]['testScore']);
+  for(int i = 0; i < StudentGradeList.length; i++){
+    studentGrade(StudentGradeList[i]['name'], StudentGradeList[i]['testScore']);
   }
 
 }
@@ -39,7 +42,7 @@ studentGrade(studentName, testScore){
   }else if( testScore >= 0 && testScore <= 59) {
     print("$studentName's grade: E");
   }else{
-    print("Invalid Grade");
+    print("$studentName's grade: Invalid Grade");
   }
 
 }
