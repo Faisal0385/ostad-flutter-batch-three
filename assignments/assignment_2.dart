@@ -12,33 +12,34 @@
 ///   Here's an example usage of the studentGrade function:
 
 void main(){
-  String studentName = "Faisal A Salam";  /// student name must be yours
-  int testScore = 70;
 
-  String grade = studentGrade(testScore);
+  List Students = [
+    {"name":"Faisal A Salam", "testScore": 55},
+    {"name":"Fahad A Salam", "testScore": 95},
+    {"name":"Fahim A Salam", "testScore": 85},
+  ];
 
-  print("$studentName's grade: $grade");
+  for(int i = 0; i < Students.length; i++){
+    studentGrade(Students[i]['name'], Students[i]['testScore']);
+  }
+
 }
 
 
-String studentGrade(testScore){
-
-  String grade;
+studentGrade(studentName, testScore){
 
   if( testScore >= 90 && testScore <= 100){
-    grade = "A";
+    print("$studentName's grade: A");
   }else if( testScore >= 80 && testScore <= 89){
-    grade = "B";
+    print("$studentName's grade: B");
   }else if( testScore >= 70 && testScore <= 79){
-    grade = "C";
+    print("$studentName's grade: C");
   }else if( testScore >= 60 && testScore <= 69){
-    grade = "D";
+    print("$studentName's grade: D");
   }else if( testScore >= 0 && testScore <= 59) {
-    grade = "F";
+    print("$studentName's grade: E");
   }else{
-    grade = "Invalid Grade";
+    print("Invalid Grade");
   }
-
-  return grade;
 
 }
