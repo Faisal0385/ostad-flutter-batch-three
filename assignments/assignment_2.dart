@@ -12,37 +12,31 @@
 ///   Here's an example usage of the studentGrade function:
 
 void main(){
-
-  List StudentGradeList = [
-    {"name":"Faisal A Salam", "testScore": 55},
-    {"name":"Fahad", "testScore": 95},
-    {"name":"Fahim", "testScore": 85},
-    {"name":"Fatema", "testScore": 75},
-    {"name":"Farzana", "testScore": -15},
-    {"name":"Famida", "testScore": 15.55},
-  ];
-
-  for(int i = 0; i < StudentGradeList.length; i++){
-    studentGrade(StudentGradeList[i]['name'], StudentGradeList[i]['testScore']);
-  }
-
+  String studentName = "Faisal A. Salam";  /// student name must be yours
+  int testScore = 80;
+  String grade  = studentGrade(studentName, testScore);
+  print("$studentName's grade: $grade");
 }
 
+/// Dart function called studentGrade
+String studentGrade(studentName, testScore){
 
-studentGrade(studentName, testScore){
+  String grade;
 
   if( testScore >= 90 && testScore <= 100){
-    print("$studentName's grade: A");
+    grade = "A";
   }else if( testScore >= 80 && testScore <= 89){
-    print("$studentName's grade: B");
+    grade = "B";
   }else if( testScore >= 70 && testScore <= 79){
-    print("$studentName's grade: C");
+    grade = "C";
   }else if( testScore >= 60 && testScore <= 69){
-    print("$studentName's grade: D");
+    grade = "D";
   }else if( testScore >= 0 && testScore <= 59) {
-    print("$studentName's grade: E");
+    grade = "E";
   }else{
-    print("$studentName's grade: Invalid Grade");
+    grade = "Invalid Grade";
   }
+
+  return grade;
 
 }
