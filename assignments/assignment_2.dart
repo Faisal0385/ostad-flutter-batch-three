@@ -38,5 +38,4 @@ String studentGrade(studentName, testScore){
   }
 
   return grade;
-
 }
