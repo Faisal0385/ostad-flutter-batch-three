@@ -77,7 +77,7 @@ class Car {
   int year;
 
   // milesDriven: a double representing the number of miles driven by the car
-  double milesDriven = 0.0;
+  late double milesDriven;
 
   // ★ The class should also have a static property called numberOfCars that keeps track
   // of the number of Car objects that have been created. This property should be
