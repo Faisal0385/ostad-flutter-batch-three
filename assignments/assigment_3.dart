@@ -2,7 +2,7 @@
 main() {
 
   /// Car One Object
-  Car toyota = Car("Toyota", "Toyota 123", 2016);
+  Car toyota = Car("Toyota", "Toyota Crown", 2016);
 
   // Drive each car a different number of miles using the drive() method.
   toyota.drive(12.5);
@@ -93,7 +93,7 @@ class Car {
 
   // ● drive(double miles): a method that takes a double parameter representing the
   // number of miles driven and adds it to the milesDriven property
-  double drive(double miles) =>  this.milesDriven + miles;
+  double drive(double miles) =>  this.milesDriven = miles;
 
   // ● getMilesDriven(): a method that returns the value of the milesDriven property
   getMilesDriven() => this.milesDriven;
