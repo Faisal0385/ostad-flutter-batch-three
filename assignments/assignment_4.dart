@@ -54,32 +54,42 @@ class CurrentAccount extends Account {
   // Implement the withdraw() method in the CurrentAccount class as follows:
   @override
   withdraw(double amount) {
-    // ● If the withdrawal amount exceeds the overdraft limit, print a message indicating insufficient funds.
-    // ● Allow withdrawals up to the overdraft limit.
+    // If the withdrawal amount exceeds the overdraft limit, print a message indicating insufficient funds.
+    // Allow withdrawals up to the overdraft limit.
     if (amount > overdraftLimit) {
       print("Insufficient funds!! Your overdraft limit is ${overdraftLimit}");
     } else {
-      balance = super.balance - amount;
-      return balance;
+      double final_balance = super.balance - amount;
+      return final_balance;
     }
   }
 }
 
 // In main()
 void main() {
-  // ● Create an instance of the SavingsAccount class by providing values for the account
+  // Create an instance of the SavingsAccount class by providing values for the account
   // number, initial balance, and interest rate.
-  SavingsAccount accointObj = SavingsAccount(123456, 10000.00, 10.00);
-  // ● Use the instance to perform operations like depositing and withdrawing money.
-  print("After depositing amount: ${accointObj.deposit(6000.00)}");
-  print("After withdrawing amount: ${accointObj.withdraw(1000.00)}");
+  SavingsAccount savingsAccountObj = SavingsAccount(123456, 10000.00, 10.00);
+  print("Saving Account Info:");
+  print("Saving Account No: ${savingsAccountObj.accountNumber}");
+  print("Balance: ${savingsAccountObj.balance}");
 
-  // ● Create an instance of the CurrentAccount class by providing values for the account
+  // Use the instance to perform operations like depositing and withdrawing money.
+  print("After depositing balance amount: ${savingsAccountObj.deposit(6000.00)}");
+  print("After withdrawing balance amount: ${savingsAccountObj.withdraw(1000.00)}");
+
+  print("  ");
+
+  // Create an instance of the CurrentAccount class by providing values for the account
   // number, initial balance, and overdraft limit.
-  CurrentAccount currentAccountObj = CurrentAccount(123456, 6000.00, 2000.00);
-  // ● Use the instance to perform operations like depositing and withdrawing.
-  // print("After depositing amount: ${currentAccountObj.deposit(2000.00)}");
-  // print(currentAccountObj.withdraw(2000.00));
+  CurrentAccount currentAccountObj = CurrentAccount(54321, 60000.00, 10000.00);
+  print("Current Account Info:");
+  print("Current Account No: ${currentAccountObj.accountNumber}");
+  print("Balance: ${currentAccountObj.balance}");
+
+  // Use the instance to perform operations like depositing and withdrawing.
+  print("After depositing balance amount: ${currentAccountObj.deposit(5000.00)}");
+  print("After withdrawing balance amount: ${currentAccountObj.withdraw(10000.00)}");
 
 }
 
