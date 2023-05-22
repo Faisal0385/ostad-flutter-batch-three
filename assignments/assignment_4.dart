@@ -36,13 +36,14 @@ class SavingsAccount extends Account {
   @override
   withdraw(double amount) {
     double final_balance = super.balance - amount;
-    final_balance = final_balance + (final_balance * (this.interestRate/100));
+    final_balance = final_balance + (final_balance * (this.interestRate / 100));
     return final_balance;
   }
 }
 
 // Define a class CurrentAccount that extends the Account class.
 class CurrentAccount extends Account {
+
   // additional property called overdraftLimit (double).
   late double overdraftLimit;
 
