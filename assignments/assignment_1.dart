@@ -18,5 +18,4 @@ main() {
   print(phoneNumber[0] + phoneNumber[3]);
   print(phoneNumber[0] + phoneNumber[4]);
 
-
 }
