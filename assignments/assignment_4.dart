@@ -22,7 +22,7 @@ abstract class Account {
 class SavingsAccount extends Account {
 
   // interestRate (double).
-  late double interestRate;
+  double interestRate;
 
   SavingsAccount(accountNumber, balance, this.interestRate) {
     super.accountNumber = accountNumber;
@@ -45,7 +45,7 @@ class SavingsAccount extends Account {
 class CurrentAccount extends Account {
 
   // additional property called overdraftLimit (double).
-  late double overdraftLimit;
+  double overdraftLimit;
 
   CurrentAccount(accountNumber, balance, this.overdraftLimit) {
     super.accountNumber = accountNumber;
